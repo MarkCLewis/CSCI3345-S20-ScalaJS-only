@@ -26,7 +26,7 @@ object Hello {
     drawSomethingOnCanvas(document.getElementById("canvas").asInstanceOf[html.Canvas])
 
     ReactDOM.render(
-      h1("Hello, world!"),
+      div(h1("Hi!"), TextComponent("Stuff")),
       document.getElementById("react-root")
     )
   }

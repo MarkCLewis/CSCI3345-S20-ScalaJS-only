@@ -5,7 +5,6 @@ ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "edu.trinity"
 ThisBuild / organizationName := "Trinity"
 
-
 lazy val root = (project in file("."))
   .settings(
     name := "CSCI3345-ScalaJS-only",
@@ -14,7 +13,8 @@ lazy val root = (project in file("."))
 		libraryDependencies += "me.shadaj" %%% "slinky-core" % "0.6.5",
 		libraryDependencies += "me.shadaj" %%% "slinky-web" % "0.6.5",
     libraryDependencies += scalaTest % Test,
-		scalaJSUseMainModuleInitializer := true
+    // scalacOptions += "-P:scalajs:sjsDefinedByDefault",
+    scalaJSUseMainModuleInitializer := true
   ).enablePlugins(ScalaJSPlugin)
 
 // Uncomment the following for publishing to Sonatype.
